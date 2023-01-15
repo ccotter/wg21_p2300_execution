@@ -4875,7 +4875,7 @@ enum class forward_progress_guarantee {
           friend auto tag_invoke(get_completion_signatures_t, <i>read-sender</i>, Env)
             -> completion_signatures&lt;set_value_t(<i>call-result-t</i>&lt;Tag, Env>)>; <i>// not defined</i>
 
-        friend <i>empty-attrs</i> tag_invoke(get_attrs_t, const <i>just-sender</i>&) noexcept {
+        friend <i>empty-attrs</i> tag_invoke(get_attrs_t, const <i>read-sender</i>&) noexcept {
           return {};
         }
       };
